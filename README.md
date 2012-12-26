@@ -14,3 +14,5 @@ the concept is quite simple<br />
 4. save to DB<br />
 5. view your uploaded image<br />
 6. check the image for authenticancy<br />
+
+database provided in the folder so that you can test with a real picture (oh please don't commercial my noob images ;) )
