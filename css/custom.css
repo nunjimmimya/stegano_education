@@ -1,0 +1,61 @@
+/* custom.css: menyimpan CSS selain dari default  */
+
+#proses /* form */
+{ float: left;
+  width: 300px;
+}
+
+#preview /* form */
+{ float: left;
+}
+
+#preview ul 
+{ float: left;
+  margin: 0;
+  padding: 30px;
+  list-style: none;
+  line-height: normal;
+}
+
+#preview li 
+{ float: left; 
+  display: block;
+  padding: 10px;
+}
+
+.clear 
+{ clear: both; }
+
+#hubungi
+{ float: right; }
+
+#navi
+{ float: left;
+  width: 250px;
+}
+
+#content
+{ float: left;
+  width: 550px;
+}
+
+/* Button Style */
+
+.user-button-style 
+{ display: inline-block;
+  width: 150px;
+  margin-top: 10px;
+  padding: 7px 15px;
+  background: #36332E;
+  border-radius: 5px;
+}
+
+.user-button-style a 
+{ letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #FFFFFF;
+}
