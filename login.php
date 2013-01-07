@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
   <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
   <link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
   <?php
    session_start(); //we're using sessions so this is required!
    
@@ -46,7 +47,7 @@
    <div id="page-wrapper">
 	<div id="page">
 	 <div id="wide-content">
-	  <div>
+	  <div id="proses">
 	   <h2>Login Masuk</h2>
 	   <?php
         if($_SESSION['loggedin'] == TRUE) 
@@ -112,6 +113,7 @@
              <b>Password:</b> <br /> <input type="password" name="password" placeholder="Kata Laluan Anda"> <p>
              <input type="submit" name="submitLogin" value="Login!">
             </form>
+            </div>
           <?php
             // free result set
             $result->free();
@@ -127,13 +129,26 @@
         <b>Password:</b> <br /> <input type="password" name="password" placeholder="Kata Laluan Anda"> <p>
         <input type="submit" name="submitLogin" value="Login!">
        </form>
+       </div>
        <?php
         }
         
         // close connection
         $mysqli->close();
        ?>
-       <p></p>
+      <div id="preview" style="width: 650px">
+       <div align="center"><h1>Daftar Sekarang</h1></div>
+       <div style="margin-left: 100px">
+        <p></p>
+        <form method="post" action="signup.php">
+         <label style="padding: 25px 52px 25px 0px">Nama Anda</label><input type="text" name="nama" placeholder="Masukkan Nama Anda" size="55" />
+         <label style="padding: 25px 47px 25px 0px">Alamat Anda</label><input type="text" name="alamat" placeholder="Masukkan Alamat Anda" size="55" />
+         <label style="padding: 25px 27px 25px 0px">No Telefon Anda</label><input type="text" name="telefon" placeholder="Masukkan No Telefon Anda" size="55" />
+         <label style="padding: 25px 54px 25px 0px">Email Anda</label><input type="text" name="email" placeholder="Masukkan Email Anda" size="55" />
+         <label style="padding: 25px 31px 25px 0px">Password Anda</label><input type="password" name="password" placeholder="Masukkan Password Anda" size="55" />
+         <div style="margin-top: 30px"><input type="submit" value="Daftar!" /></div>
+        </form>
+       </div>
 	  </div>
 	 </div>
 	</div>

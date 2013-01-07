@@ -38,9 +38,6 @@
           { //loggedin already
             echo "Salam, ".htmlspecialchars($_SESSION['username'])."<br />";
             
-            //$link = mysql_connect('localhost', 'root', 'gampang') or die(mysql_error());
-            //$db_selected = mysql_select_db('stegano', $link) or die(mysql_error());
-            
             $mysqli = new mysqli("localhost", "root", "gampang", "stegano");
 
             // check connection
@@ -54,7 +51,6 @@
 	        $gambar = $_SESSION['gambar'];
 	        $kunci = $_SESSION['kunci'];
             $query = "insert into image values('$gambar','$kunci','$username',CURDATE()) ";
-            //mysql_query($query) or die(mysql_error());
             $mysqli->query($query);
  
             // padam session gambar dan key sesudah save dalam DB
@@ -62,13 +58,14 @@
             unset($_SESSION['kunci']);
             unset($_SESSION['stego']);
             
+            ?> <p>Gambar Berjaya disimpan</p> <?php
+            
             // padam fail compare dan copyright
             unlink('image/compare.png');
             unlink('image/message.png');
 
             // close connection
             $mysqli->close();
-            //mysql_close($link);
           }
         }
         else
@@ -78,8 +75,6 @@
         }
        ?>
 	  <div>
-	   <?php
-	   ?>
 	   <p></p>
 	   <p class="button-style"><a href="stegano.php">Tambah Gambar</a></p>
 	   <p class="button-style"><a href="login.php">>> Ke Login Panel</a></p>

@@ -299,13 +299,13 @@ hr
 
 #banner 
 { overflow: hidden;
-  width: 960px;
+  width: 600px;
   margin: 20px auto 50px auto;
 }
 
 #banner .img-border 
-{ height: 500px;
-  border: 20px solid #FFFFFF;
+{ height: 355px;
+  border: 5px solid #FFFFFF;
 }
 
 /* Button Style */

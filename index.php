@@ -29,7 +29,7 @@
    </div>
   </div>
   <div id="banner">
-   <div class="img-border"> <a href="#"><img src="image/horizon-binari.png" width="920" height="500" alt="" /></a> </div>
+   <div class="img-border"> <a href="#"><img src="image/horizon-binari.png" width="600" alt="" /></a> </div>
   </div>
   <div id="wrapper">
    <div id="page-wrapper">
