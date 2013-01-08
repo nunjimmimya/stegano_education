@@ -70,7 +70,7 @@
    	    <?php 
 	     // panggil links gambar dari DB
 	     $username = $_SESSION['username'];
-         $query = "select * from image";
+         $query = "select * from image order by emailid";
          $result = $mysqli->query($query);
          while ($row = $result->fetch_array(MYSQLI_ASSOC))
 	     { if ($row['emailid'] != $customer)
